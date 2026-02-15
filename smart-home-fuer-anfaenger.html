@@ -3,179 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home für Anfänger: Der komplette Guide 2026</title>
-    <meta name="description" content="Der ultimative Einstiegsguide für Smart Home 2026. Lerne die Grundlagen, die besten Geräte und wie du dein Zuhause intelligent machst.">
+    <title>Smart Home für Anfänger - Der komplette Guide 2026</title>
+    <meta name="description" content="Smart Home Einsteiger Guide: Alles was du wissen musst. Von der Auswahl der Geräte bis zur ersten Automation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        :root { --primary: #0f172a; --accent: #3b82f6; --accent-hover: #2563eb; --success: #10b981; --warning: #f59e0b; --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-300: #cbd5e1; --gray-400: #94a3b8; --gray-500: #64748b; --gray-600: #475569; --gray-700: #334155; --shadow: 0 4px 6px -1px rgba(0,0,0,0.1); --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1); --radius: 12px; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
-        header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 2rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { opacity: 0.8; }
-        nav { background: #0f3460; padding: 1rem; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 1rem; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.3s; }
-        nav a:hover { background: #e94560; }
-        main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .article { background: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .article h2 { color: #1a1a2e; margin-bottom: 1rem; margin-top: 1.5rem; }
-        .article h2:first-child { margin-top: 0; }
-        .article h3 { color: #16213e; margin: 1.5rem 0 0.75rem; }
-        .article .meta { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
-        .article .rating { color: #f39c12; }
-        .article .price { font-size: 1.5rem; color: #27ae60; font-weight: bold; }
-        .article .affiliate-btn { display: inline-block; background: #e94560; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; margin: 1rem 0; transition: transform 0.2s; font-weight: bold; }
-        .article .affiliate-btn:hover { transform: scale(1.05); }
-        .article table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-        .article th, .article td { padding: 0.75rem; border: 1px solid #ddd; text-align: left; }
-        .article th { background: #f8f9fa; }
-        .article ul, .article ol { margin: 1rem 0 1rem 2rem; }
-        .article li { margin: 0.5rem 0; }
-        .article .intro { font-size: 1.1rem; color: #444; margin-bottom: 1.5rem; }
-        .article .highlight-box { background: #e8f4fd; border-left: 4px solid #0f3460; padding: 1rem; margin: 1.5rem 0; }
-        .article .faq { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
-        .article .faq h3 { margin-top: 0; }
-        footer { background: #1a1a2e; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
-        footer p { opacity: 0.7; }
-        .disclaimer { font-size: 0.8rem; color: #666; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #ddd; }
-        .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .nav-links a { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #0f3460; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .nav-links a:hover { background: #0f3460; color: white; }
-        @media (max-width: 600px) { header h1 { font-size: 1.8rem; } }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.7; color: var(--gray-700); background: var(--gray-50); }
+        
+        nav { background: white; border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; }
+        nav .logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--primary); text-decoration: none; }
+        nav .logo i { color: var(--accent); }
+        nav .nav-links { display: flex; gap: 0.25rem; }
+        nav a { color: var(--gray-600); text-decoration: none; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500; transition: all 0.2s; }
+        nav a:hover { background: var(--gray-100); color: var(--primary); }
+        
+        header { background: linear-gradient(135deg, var(--primary), #1e293b); color: white; padding: 4rem 1rem; text-align: center; }
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+        header p { opacity: 0.9; font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+        
+        main { max-width: 800px; margin: 0 auto; padding: 3rem 1rem; }
+        
+        .content-box { background: white; border-radius: var(--radius); padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow); }
+        .content-box h2 { color: var(--primary); margin: 1.5rem 0 0.75rem; font-size: 1.4rem; }
+        .content-box h2:first-child { margin-top: 0; }
+        .content-box p { margin-bottom: 1rem; color: var(--gray-600); }
+        .content-box ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .content-box li { margin-bottom: 0.5rem; color: var(--gray-600); }
+        
+        .checklist { background: var(--gray-50); border-radius: 8px; padding: 1.5rem; margin: 1rem 0; }
+        .checklist h3 { margin-bottom: 1rem; color: var(--primary); }
+        .checklist label { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; cursor: pointer; }
+        .checklist input { width: 20px; height: 20px; accent-color: var(--accent); }
+        
+        .tip-box { background: #eff6ff; border-radius: 8px; padding: 1.25rem; margin: 1.5rem 0; border-left: 4px solid var(--accent); }
+        .tip-box strong { color: var(--accent); }
+        
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; }
+        .product-item { background: var(--gray-50); padding: 1rem; border-radius: 8px; text-align: center; }
+        .product-item .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .product-item strong { display: block; color: var(--primary); }
+        .product-item span { font-size: 0.85rem; color: var(--gray-500); }
+        
+        footer { background: var(--primary); color: white; padding: 2rem 1rem; margin-top: 4rem; text-align: center; }
+        footer p { opacity: 0.7; font-size: 0.9rem; }
+        footer .links { margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        footer .links a { color: white; opacity: 0.7; text-decoration: none; font-size: 0.85rem; }
+        
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none; margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.9; }
+        .back-link:hover { opacity: 1; }
+        
+        @media (max-width: 768px) { header h1 { font-size: 1.75rem; } nav .nav-links { display: none; } }
     </style>
 </head>
 <body>
-    <header>
-        <h1>🏠 Smart Home Guide</h1>
-        <p>Tests, Vergleiche & Anleitungen für dein intelligentes Zuhause</p>
-    </header>
-    
     <nav>
-        <a href="index.html">Startseite</a>
-        <a href="smart-home-fuer-anfaenger.html">Anfänger-Guide</a>
-        <a href="hub-vergleich.html">Hub Vergleich</a>
-        <a href="smart-home-ohne-abo.html">Ohne Abo</a>
-        <a href="heizkosten-sparen.html">Heizkosten</a>
+        <div class="container">
+            <a href="/" class="logo"><i data-lucide="home"></i> Smart Home Guide</a>
+            <div class="nav-links">
+                <a href="/">Start</a>
+                <a href="guide.html">Guide</a>
+                <a href="smart-plugs.html">Steckdosen</a>
+                <a href="thermostate.html">Thermostate</a>
+                <a href="hub-vergleich.html">Hubs</a>
+                <a href="about.html">Über</a>
+            </div>
+        </div>
     </nav>
     
+    <header>
+        <a href="/" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
+        <h1>Smart Home für Anfänger</h1>
+        <p>Der komplette Einstieg: Alles was du wissen musst</p>
+    </header>
+    
     <main>
-        <div class="nav-links">
-            <a href="index.html">← Zurück zur Startseite</a>
+        <div class="content-box">
+            <h2>Was ist Smart Home?</h2>
+            <p>Smart Home bedeutet: Geräte in deinem Zuhause sind vernetzt und können per App, Sprache oder automatisch gesteuert werden.</p>
+            <p>Das Ziel: Mehr Komfort, mehr Sicherheit, weniger Kosten.</p>
         </div>
         
-        <article class="article">
-            <h1>Smart Home für Anfänger: Der komplette Guide 2026</h1>
-            <div class="meta">
-                <span>Aktualisiert: Februar 2026</span> |
-                <span>Lesezeit: 8 Minuten</span>
+        <div class="content-box">
+            <h2>🔑 Checkliste: Das brauchst du</h2>
+            <div class="checklist">
+                <label><input type="checkbox"> <strong>Smartphone</strong> - iPhone oder Android</label>
+                <label><input type="checkbox"> <strong>WLAN</strong> - stabiles Netzwerk zu Hause</label>
+                <label><input type="checkbox"> <strong>Überlegung:</strong> Was will ich automatisieren?</label>
             </div>
-            
-            <p class="intro">Du möchtest dein Zuhause intelligent machen, weißt aber nicht, wo du anfangen sollst? In diesem Guide erklären wir dir alles, was du als Einsteiger wissen musst – von den Grundlagen bis zur praktischen Umsetzung.</p>
-            
-            <h2>Was ist Smart Home eigentlich?</h2>
-            <p>Smart Home bezeichnet ein vernetztes Zuhause, in dem verschiedene Geräte über das Internet miteinander kommunizieren und zentral gesteuert werden können. Das reicht von der smarten Steckdose über Heizungsthermostate bis hin zu komplexen Sicherheitssystemen.</p>
-            
-            <p>Das Ziel? Mehr Komfort, höhere Sicherheit und nicht zuletzt: Geld sparen. Intelligente Heizungssteuerung kann die Heizkosten um bis zu 30% reduzieren. Und das ist nur ein Beispiel von vielen.</p>
-            
-            <h2>Die Grundbegriffe, die du kennen musst</h2>
-            
-            <h3>1. Smart Home Hub (Zentrale)</h3>
-            <p>Der Hub ist das Herzstück vieler Smart-Home-Systeme. Er verbindet alle Geräte miteinander und ermöglicht die Steuerung über eine zentrale App. Manche Geräte brauchen einen Hub, andere funktionieren direkt per WLAN.</p>
-            
-            <h3>2. WLAN vs. Funkstandards</h3>
-            <p>Die meisten Geräte nutzen WLAN (2,4 GHz). Es gibt aber auch alternative Funkstandards wie Zigbee, Z-Wave oder Matter. Diese sind oft stromsparender und haben eine größere Reichweite.</p>
-            
-            <h3>3. Sprachassistenten</h3>
-            <p>Amazon Alexa, Google Assistant und Apple Siri ermöglichen die Sprachsteuerung deiner Geräte. Das ist besonders praktisch, wenn du gerade keine Hand frei hast.</p>
-            
-            <div class="highlight-box">
-                <strong>Tipp:</strong> Für Einsteiger empfehlen wir, mit einem einfachen Bereich zu beginnen – zum Beispiel smarten Steckdosen oder einem smarten Thermostat. So lernst du das System kennen, ohne dich zu überfordern.
-            </div>
-            
-            <h2>Die besten Einstiegsgeräte 2026</h2>
-            
-            <h3>1. Smarte Steckdosen</h3>
-            <p>Der einfachste Einstieg in die Smart-Home-Welt. Die TP-Link Tapo P110 ist unser Testsieger – sie ist günstig, zuverlässig und misst sogar den Stromverbrauch.</p>
-            
-            <h3>2. Smarte Thermostate</h3>
-            <p>Wer Heizkosten sparen will, kommt an smarten Thermostaten nicht vorbei. Geräte wie das Bosch Smart Home Thermostat oder tado° lernen deine Gewohnheiten und passen die Heizung automatisch an.</p>
-            
-            <h3>3. Smart Lighting</h3>
-            <p>Intelligente Glühbirnen wie Philips Hue oder die günstigere Alternative von Tintermöwen das Zuhause in wenigen Minuten. Farbwechsel, Dimmen und Zeitpläne sind nur einen Fingertipp entfernt.</p>
-            
-            <h3>4. Smart Locks</h3>
-            <p>Smartes Türschloss? Ja, bitte! Geräte wie Nuki oder Aqara U100 ermöglichen keyless Entry – und du kannst sogar временные Zugangscodes für Gäste vergeben.</p>
-            
-            <h2>Welches Ökosystem soll ich wählen?</h2>
-            <p>Eine der wichtigsten Entscheidungen: Wähle ein Ökosystem und bleib dabei. Die drei großen Player sind:</p>
-            
-            <ul>
-                <li><strong>Amazon Alexa:</strong> Größtes Ökosystem, viele Geräte, gute Sprachsteuerung</li>
-                <li><strong>Google Home:</strong> Hervorragende Sprachsuche, gute Integration mit Android</li>
-                <li><strong>Apple HomeKit:</strong> Höchste Sicherheit, perfekt für iPhone-Nutzer</li>
-            </ul>
-            
-            <p>Unser Tipp: Wenn du schon ein Smartphone hast, bleib beim entsprechenden Ökosystem. iPhone-Nutzer profitieren von HomeKit, Android-Nutzer von Google Home.</p>
-            
-            <h2>Was kostet ein Smart Home?</h2>
-            <p>Die gute Nachricht: Smart Home muss nicht teuer sein. Für unter 100€ kannst du bereits loslegen:</p>
-            
-            <table>
-                <tr><th>Komponente</th><th>Preis</th><th>Beispiel</th></tr>
-                <tr><td>Smarte Steckdose</td><td>ab 20€</td><td>TP-Link Tapo P110</td></tr>
-                <tr><td>Smarte Glühbirne</td><td>ab 15€</td><td> Philips Hue White</td></tr>
-                <tr><td>Thermostat-Set</td><td>ab 80€</td><td>Bosch Smart Home</td></tr>
-                <tr><td>Smart Speaker</td><td>ab 30€</td><td>Amazon Echo Dot</td></tr>
-            </table>
-            
-            <h2>Die Vorteile im Überblick</h2>
-            <ul>
-                <li><strong>Komfort:</strong> Geräte per Sprachbefehl oder App steuern</li>
-                <li><strong>Energie sparen:</strong> Intelligente Heizung und Beleuchtung</li>
-                <li><strong>Sicherheit:</strong> Überwachungskameras und Smart Locks</li>
-                <li><strong>Barrierefreiheit:</strong> Sprachsteuerung hilft Menschen mit Einschränkungen</li>
-            </ul>
-            
-            <h2>Die Nachteile, die du kennen solltest</h2>
-            <ul>
-                <li><strong>Datenschutz:</strong> Alle Geräte senden Daten in die Cloud</li>
-                <li><strong>Komplexität:</strong> Mehr Geräte = mehr Konfigurationsaufwand</li>
-                <li><strong>Abhängigkeit:</strong> Du brauchst WLAN und Strom</li>
-                <li><strong>Kompatibilität:</strong> Nicht alle Geräte funktionieren zusammen</li>
-            </ul>
-            
-            <div class="faq">
-                <h3>❓ Häufig gestellte Fragen</h3>
-                
-                <h4>Muss ich mieten, um Smart Home einzurichten?</h4>
-                <p>Ja! Die meisten Smart-Home-Geräte sind für Mieter geeignet, da sie keine Installation erfordern. Smarte Thermostate lassen sich einfach auf die Heizkörper montieren.</p>
-                
-                <h4>Brauche ich einen Smart-Home-Hub?</h4>
-                <p>Nicht unbedingt. Viele Geräte funktionieren direkt per WLAN. Ein Hub wird erst wichtig, wenn du viele Zigbee- oder Z-Wave-Geräte nutzen möchtest.</p>
-                
-                <h4>Wie sicher ist Smart Home?</h4>
-                <p>Es kommt auf die Geräte an. Achte auf Geräte mit Verschlüsselung und regelmäßigen Updates. Nutze ein separates WLAN für deine Smart-Home-Geräte.</p>
-                
-                <h4>Kann ich Smart Home auch ohne Internet nutzen?</h4>
-                <p>Teilweise. Viele Geräte funktionieren auch ohne Internet, aber einige Features wie Fernsteuerung oder Sprachassistenten brauchen eine Verbindung.</p>
-            </div>
-            
-            <h2>Fazit</h2>
-            <p>Smart Home ist längst kein Luxus mehr – es ist für jeden zugänglich. Mit unter 100€ kannst du loslegen und erste Erfahrungen sammeln. Unser Tipp: Beginne klein mit einer smarten Steckdose oder einem Thermostat und erweitere dein System nach und nach.</p>
-            
-            <p>Die wichtigste Regel: Wähle ein Ökosystem und bleib dabei. So vermeidest du Kompatibilitätsprobleme und kannst alle Geräte zentral steuern.</p>
-            
-            <div class="disclaimer">
-                *Dieser Beitrag enthält Affiliate-Links. Als Amazon-Partner verdiene ich an qualifizierten Käufen.
-            </div>
-        </article>
+        </div>
         
+        <div class="content-box">
+            <h2>📱 Schritt 1: Wähle deine Plattform</h2>
+            <div class="products">
+                <div class="product-item">
+                    <div class="icon">🍎</div>
+                    <strong>Apple</strong>
+                    <span>HomeKit</span>
+                </div>
+                <div class="product-item">
+                    <div class="icon">🌴</div>
+                    <strong>Google</strong>
+                    <span>Home</span>
+                </div>
+                <div class="product-item">
+                    <div class="icon">🤖</div>
+                    <strong>Home Assistant</strong>
+                    <span>Lokal</span>
+                </div>
+            </div>
+            <div class="tip-box">
+                <strong>Tipp:</strong> Für Anfänger empfehlen wir Apple HomeKit (wenn iPhone) oder Google Home. Für Fortgeschrittene: Home Assistant.
+            </div>
+        </div>
+        
+        <div class="content-box">
+            <h2>💡 Schritt 2: Kaufe die ersten Geräte</h2>
+            <p>Beginne günstig:</p>
+            <ul>
+                <li><strong>Smart Steckdose:</strong> €15-30 - teste die App</li>
+                <li><strong>Smarte Glühbirne:</strong> €20-40 - sieh Lichtautomation</li>
+                <li><strong>Zusätzlich:</strong> Sensoren, Thermostate</li>
+            </ul>
+        </div>
+        
+        <div class="content-box">
+            <h2>⚙️ Schritt 3: Richte Automationen ein</h2>
+            <p>Beispiele für den Anfang:</p>
+            <ul>
+                <li>🌅 Licht an bei Sonnenaufgang</li>
+                <li>🏠 Alle Lichter aus wenn du gehst</li>
+                <li>🌡️ Heizung aus wenn Fenster offen</li>
+                <li>🌙 Abends gedimmtes Licht</li>
+            </ul>
+        </div>
+        
+        <div class="content-box">
+            <h2>❓ Häufige Fragen</h2>
+            <h2>Brauche ich einen Hub?</h2>
+            <p>Manche Geräte brauchen einen, andere nicht. Für den Anfang: Geräte ohne Hub wählen (WLAN/Thread).</p>
+            
+            <h2>Sind die Daten sicher?</h2>
+            <p>Ja, wenn du lokale Lösungen wie Home Assistant nutzt. Cloud-Lösungen speichern Daten auf Servern.</p>
+            
+            <h2>Was kostet das alles?</h2>
+            <p>Ab €50 für die Grundausstattung. Es gibt kein Limit nach oben.</p>
+        </div>
     </main>
     
     <footer>
-        <p>🏠 Smart Home Guide Deutschland</p>
-        <p>Tests & Vergleiche für dein intelligentes Zuhause</p>
-        <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.6;">
-            Amazon and the Amazon logo are trademarks of Amazon.com, Inc or its affiliates.
-        </p>
+        <p>Smart Home Guide Deutschland &copy; 2026</p>
+        <div class="links">
+            <a href="/">Startseite</a>
+            <a href="guide.html">Guide</a>
+            <a href="about.html">Über uns</a>
+        </div>
     </footer>
+    
+    <script>lucide.createIcons();</script>
 </body>
 </html>

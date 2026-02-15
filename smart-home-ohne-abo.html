@@ -3,287 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home ohne Abo: Die besten Optionen 2026</title>
-    <meta name="description" content="Smart Home ohne monatliche Kosten: Diese Geräte und Systeme funktionieren komplett ohne Abo. Wir zeigen die besten Optionen für 2026.">
+    <title>Smart Home ohne Abo 2026 - Geht das?</title>
+    <meta name="description" content="Viele Smart Home Hersteller verlangen monatliche Gebühren. Wir zeigen dir, wie du ohne Abo auskommst.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        :root { --primary: #0f172a; --accent: #3b82f6; --accent-hover: #2563eb; --success: #10b981; --warning: #f59e0b; --danger: #ef4444; --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-300: #cbd5e1; --gray-400: #94a3b8; --gray-500: #64748b; --gray-600: #475569; --gray-700: #334155; --shadow: 0 4px 6px -1px rgba(0,0,0,0.1); --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1); --radius: 12px; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
-        header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 2rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { opacity: 0.8; }
-        nav { background: #0f3460; padding: 1rem; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 1rem; padding: 0.5rem 1rem; border-radius: 4px; transition: background 0.3s; }
-        nav a:hover { background: #e94560; }
-        main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .article { background: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .article h2 { color: #1a1a2e; margin-bottom: 1rem; margin-top: 1.5rem; }
-        .article h2:first-child { margin-top: 0; }
-        .article h3 { color: #16213e; margin: 1.5rem 0 0.75rem; }
-        .article .meta { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
-        .article .rating { color: #f39c12; }
-        .article .price { font-size: 1.5rem; color: #27ae60; font-weight: bold; }
-        .article .affiliate-btn { display: inline-block; background: #e94560; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; margin: 1rem 0; transition: transform 0.2s; font-weight: bold; }
-        .article .affiliate-btn:hover { transform: scale(1.05); }
-        .article table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-        .article th, .article td { padding: 0.75rem; border: 1px solid #ddd; text-align: left; }
-        .article th { background: #f8f9fa; }
-        .article ul, .article ol { margin: 1rem 0 1rem 2rem; }
-        .article li { margin: 0.5rem 0; }
-        .article .intro { font-size: 1.1rem; color: #444; margin-bottom: 1.5rem; }
-        .article .highlight-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin: 1.5rem 0; }
-        .article .warning-box { background: #f8d7da; border-left: 4px solid #dc3545; padding: 1rem; margin: 1.5rem 0; }
-        .article .faq { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
-        .article .faq h3 { margin-top: 0; }
-        .product-card { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; background: #fafafa; }
-        .product-card h4 { color: #1a1a2e; margin-bottom: 0.5rem; }
-        footer { background: #1a1a2e; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
-        footer p { opacity: 0.7; }
-        .disclaimer { font-size: 0.8rem; color: #666; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #ddd; }
-        .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .nav-links a { background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #0f3460; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .nav-links a:hover { background: #0f3460; color: white; }
-        .badge { display: inline-block; background: #28a745; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-left: 0.5rem; }
-        @media (max-width: 600px) { header h1 { font-size: 1.8rem; } }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.7; color: var(--gray-700); background: var(--gray-50); }
+        
+        nav { background: white; border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; }
+        nav .logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--primary); text-decoration: none; }
+        nav .logo i { color: var(--accent); }
+        nav .nav-links { display: flex; gap: 0.25rem; }
+        nav a { color: var(--gray-600); text-decoration: none; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500; transition: all 0.2s; display: flex; align-items: center; gap: 0.4rem; }
+        nav a:hover { background: var(--gray-100); color: var(--primary); }
+        
+        header { background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 4rem 1rem; text-align: center; }
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+        header p { opacity: 0.9; font-size: 1.2rem; }
+        
+        main { max-width: 800px; margin: 0 auto; padding: 3rem 1rem; }
+        
+        .content-box { background: white; border-radius: var(--radius); padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow); }
+        .content-box h2 { color: var(--primary); margin: 1.5rem 0 0.75rem; font-size: 1.4rem; }
+        .content-box h2:first-child { margin-top: 0; }
+        .content-box p { margin-bottom: 1rem; color: var(--gray-600); }
+        .content-box ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .content-box li { margin-bottom: 0.5rem; color: var(--gray-600); }
+        
+        .pro { border-left: 4px solid var(--success); }
+        .contra { border-left: 4px solid var(--danger); }
+        
+        .tip-box { background: var(--gray-50); border-radius: 8px; padding: 1.25rem; margin: 1.5rem 0; }
+        .tip-box strong { color: var(--accent); }
+        
+        footer { background: var(--primary); color: white; padding: 2rem 1rem; margin-top: 4rem; text-align: center; }
+        footer p { opacity: 0.7; font-size: 0.9rem; }
+        footer .links { margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        footer .links a { color: white; opacity: 0.7; text-decoration: none; font-size: 0.85rem; }
+        
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none; margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.9; }
+        .back-link:hover { opacity: 1; }
+        
+        @media (max-width: 768px) { header h1 { font-size: 1.75rem; } nav .nav-links { display: none; } }
     </style>
 </head>
 <body>
-    <header>
-        <h1>🏠 Smart Home Guide</h1>
-        <p>Tests, Vergleiche & Anleitungen für dein intelligentes Zuhause</p>
-    </header>
-    
     <nav>
-        <a href="index.html">Startseite</a>
-        <a href="smart-home-fuer-anfaenger.html">Anfänger-Guide</a>
-        <a href="hub-vergleich.html">Hub Vergleich</a>
-        <a href="smart-home-ohne-abo.html">Ohne Abo</a>
-        <a href="heizkosten-sparen.html">Heizkosten</a>
+        <div class="container">
+            <a href="/" class="logo"><i data-lucide="home"></i> Smart Home Guide</a>
+            <div class="nav-links">
+                <a href="/">Start</a>
+                <a href="guide.html">Guide</a>
+                <a href="smart-plugs.html">Steckdosen</a>
+                <a href="thermostate.html">Thermostate</a>
+                <a href="hub-vergleich.html">Hubs</a>
+                <a href="about.html">Über</a>
+            </div>
+        </div>
     </nav>
     
+    <header>
+        <a href="/" class="back-link"><i data-lucide="arrow-left"></i> Zurück</a>
+        <h1>Smart Home ohne Abo</h1>
+        <p>Geht das? Ja! So machst du es richtig</p>
+    </header>
+    
     <main>
-        <div class="nav-links">
-            <a href="index.html">← Zurück zur Startseite</a>
+        <div class="content-box">
+            <h2>Das Problem</h2>
+            <p>Viele Smart Home Hersteller locken mit günstigen Startgeräten und verlangen dann monatliche Gebühren für Cloud-Funktionen, App-Zugriff oder erweiterte Features.</p>
+            <p>Die Folge: Aus einem €30-Gerät werden schnell €10/Monat = €120/Jahr.</p>
         </div>
         
-        <article class="article">
-            <h1>Smart Home ohne Abo: Die besten Optionen 2026</h1>
-            <div class="meta">
-                <span>Guide: Februar 2026</span> |
-                <span>Keine versteckten Kosten</span>
-            </div>
-            
-            <p class="intro">Viele Smart-Home-Anbieter locken mit günstigen Geräten, verlangen aber monatliche Abos für wichtige Funktionen. Wir zeigen dir, welche Systeme komplett ohne Abo funktionieren – und wie du langfristig Geld sparst.</p>
-            
-            <div class="warning-box">
-                <strong>⚠️ Achtung versteckte Kosten:</strong> Manche Anbieter verlangen nach dem Kauf noch monatliche Gebühren für Cloud-Speicher, erweiterte Funktionen oder Fernzugriff. Diese versteckten Kosten können über die Jahre die Anschaffungskosten weit übersteigen.
-            </div>
-            
-            <h2>Warum ist Smart Home ohne Abo besser?</h2>
-            <p>Die Rechnung ist einfach: Ein 5€-Abo pro Monat bedeutet 60€ pro Jahr. Über 5 Jahre sind das 300€额外的 Kosten – nur für Funktionen, die bei vielen Geräten bereits inklusive sind.</p>
-            
-            <p>Systeme ohne Abo bieten außerdem:</p>
+        <div class="content-box contra">
+            <h2>❌ Diese Hersteller haben Abo</h2>
             <ul>
-                <li><strong>Datenschutz:</strong> Deine Daten bleiben lokal auf deinem Gerät</li>
-                <li><strong>Unabhängigkeit:</strong> Keine Probleme, wenn der Anbieter den Service einstellt</li>
-                <li><strong>Langzeitkosten:</strong> Einmal zahlen, dauerhaft nutzen</li>
+                <li><strong>Ring</strong> - Cloud-Speicher nur mit Abo</li>
+                <li><strong>Arlo</strong> - Basis-Funktionen kostenpflichtig</li>
+                <li><strong>Nest (Google)</strong> - manche Features nur mit Abo</li>
+                <li><strong>Philips Hue</strong> - bald mit Cloud-Zwang?</li>
             </ul>
-            
-            <h2>Die besten Smart-Home-Systeme ohne Abo</h2>
-            
-            <div class="product-card">
-                <h4>TP-Link Tapo <span class="badge">KOSTENLOS</span></h4>
-                <p>TP-Link Tapo ist unsere klare Nummer 1 für Smart Home ohne Abo. Die Tapo-App ist komplett kostenlos, bietet aber dennoch alle wichtigen Funktionen:</p>
-                <ul>
-                    <li>Fernzugriff ohne Abo</li>
-                    <li>Zeitpläne und Automatisierungen</li>
-                    <li>Stromverbrauch messen</li>
-                    <li>Szenen erstellen</li>
-                </ul>
-                <p>Kompatibel mit Alexa und Google Assistant.</p>
-                
-                <a href="https://amzn.to/B09V3KXJPB" class="affiliate-btn" target="_blank" rel="nofollow">➡️ TP-Link Tapo P110 bei Amazon</a>
-            </div>
-            
-            <div class="product-card">
-                <h4>Philips Hue <span class="badge">KOSTENLOS</span></h4>
-                <p>Die Philips Hue Bridge kostet zwar einmalig, ermöglicht aber danach alles ohne Abo:</p>
-                <ul>
-                    <li>Unbegrenzte Anzahl an Lampen</li>
-                    <li>Alle Automationen inklusive</li>
-                    <li>Sync mit Musik und Spielen</li>
-                    <li>Fernzugriff ohne Extra-Kosten</li>
-                </ul>
-                <p>Einmalige Investition, lebenslange Nutzung.</p>
-                
-                <a href="https://amzn.to/B07XKF27CW" class="affiliate-btn" target="_blank" rel="nofollow">➡️ Philips Hue Starter Set bei Amazon</a>
-            </div>
-            
-            <div class="product-card">
-                <h4>Shelly <span class="badge">KOSTENLOS</span></h4>
-                <p>Shelly ist der Geheimtipp für Bastler. Die Geräte sind günstig und die App komplett kostenlos:</p>
-                <ul>
-                    <li>Keine Cloud erforderlich</li>
-                    <li>Lokale Steuerung möglich</li>
-                    <li>MQTT-Unterstützung</li>
-                    <li>Sehr günstige Geräte</li>
-                </ul>
-                <p>Perfekt für alle, die ihr Smart Home selbst hosten wollen.</p>
-                
-                <a href="https://amzn.to/B06WVJ83LX" class="affiliate-btn" target="_blank" rel="nofollow">➡️ Shelly 1 bei Amazon</a>
-            </div>
-            
-            <div class="product-card">
-                <h4>Home Assistant <span class="badge">KOSTENLOS</span></h4>
-                <p>Home Assistant ist komplett kostenlos und Open-Source. Es gibt keine versteckten Kosten – niemals:</p>
-                <ul>
-                    <li>100% kostenlos</li>
-                    <li>Lokale Verarbeitung</li>
-                    <li>Unbegrenzte Integrationen</li>
-                    <li>Keine Cloud-Abhängigkeit</li>
-                </ul>
-                <p>Die mächtigste Lösung, erfordert aber technisches Know-how.</p>
-            </div>
-            
-            <div class="product-card">
-                <h4>Aqara <span class="badge">KOSTENLOS</span></h4>
-                <p>Aqara bietet ein gutes Ökosystem ohne Abo-Zwang:</p>
-                <ul>
-                    <li>Gratis App mit allen Funktionen</li>
-                    <li>Fernzugriff inklusive</li>
-                    <li>Automationen ohne Limit</li>
-                    <li>Günstige Sensoren</li>
-                </ul>
-                <p>Die Aqara Hub M2 ist bereits für unter 50€ zu haben.</p>
-                
-                <a href="https://amzn.to/B08P2J3BGW" class="affiliate-btn" target="_blank" rel="nofollow">➡️ Aqara Hub M2 bei Amazon</a>
-            </div>
-            
-            <h2>Welche Anbieter haben Abo-Modelle?</h2>
-            <p>Damit du weißt, wovon du die Finger lassen solltest, hier eine Übersicht problematischer Anbieter:</p>
-            
-            <table>
-                <tr>
-                    <th>Anbieter</th>
-                    <th>Abo-Kosten</th>
-                    <th>Problem</th>
-                </tr>
-                <tr>
-                    <td>Ring (Amazon)</td>
-                    <td>ab €3/Monat</td>
-                    <td>Cloud-Speicher für Videos</td>
-                </tr>
-                <tr>
-                    <td>Nest (Google)</td>
-                    <td>ab €5/Monat</td>
-                    <td>Erweiterte Funktionen</td>
-                </tr>
-                <tr>
-                    <td>Arlo</td>
-                    <td>ab €3/Monat</td>
-                    <td>Cloud-Speicher</td>
-                </tr>
-                <tr>
-                    <td>Eufy</td>
-                    <td>optional</td>
-                    <td>Cloud-Option (lokale Speicherung möglich)</td>
-                </tr>
-            </table>
-            
-            <div class="highlight-box">
-                <strong>💡 Tipp:</strong> Achte beim Kauf immer darauf, ob die gewünschten Funktionen in der App inklusive sind. Wenn Fernzugriff oder Cloud-Speicher ein Extra kosten, suche nach Alternativen.
-            </div>
-            
-            <h2>Die perfekte Kombination für Smart Home ohne Abo</h2>
-            <p>Wir empfehlen folgende Kombination für ein komplettes Smart Home ohne monatliche Kosten:</p>
-            
-            <ul>
-                <li><strong>Hub:</strong> Amazon Echo oder Home Assistant</li>
-                <li><strong>Beleuchtung:</strong> Philips Hue oder Tint (günstiger)</li>
-                <li><strong>Steckdosen:</strong> TP-Link Tapo</li>
-                <li><strong>Heizung:</strong> Bosch Smart Home oder Homematic IP</li>
-                <li><strong>Sensoren:</strong> Aqara oder Shelly</li>
-            </ul>
-            
-            <h2>Kostenvergleich: Mit Abo vs. Ohne Abo</h2>
-            <table>
-                <tr>
-                    <th>Szenario</th>
-                    <th>Mit Abo</th>
-                    <th>Ohne Abo</th>
-                </tr>
-                <tr>
-                    <td>Jährliche Kosten (Abo)</td>
-                    <td>€60-120</td>
-                    <td>€0</td>
-                </tr>
-                <tr>
-                    <td>5-Jahres-Kosten (Abo)</td>
-                    <td>€300-600</td>
-                    <td>€0</td>
-                </tr>
-                <tr>
-                    <td>Fernzugriff</td>
-                    <td>Meist inklusive</td>
-                    <td>Meist inklusive</td>
-                </tr>
-                <tr>
-                    <td>Datenschutz</td>
-                    <td>Daten in der Cloud</td>
-                    <td>Lokal oder in deiner Hand</td>
-                </tr>
-            </table>
-            
-            <h2>Vorteile von Smart Home ohne Abo</h2>
-            <ul>
-                <li><strong>Keine versteckten Kosten:</strong> Was du kaufst, gehört dir</li>
-                <li><strong>Datenschutz:</strong> Viele Systeme arbeiten lokal</li>
-                <li><strong>Unabhängigkeit:</strong> Keine Probleme, wenn Anbieter den Service einstellen</li>
-                <li><strong>Langfristig günstiger:</strong> Keine laufenden Kosten</li>
-            </ul>
-            
-            <h2>Nachteile die du kennen solltest</h2>
-            <ul>
-                <li><strong>Höhere Anschaffungskosten:</strong> Einmalzahlung kann höher ausfallen</li>
-                <li><strong>Mehr Eigenleistung:</strong> Einrichtung manchmal komplexer</li>
-                <li><strong>Weniger Support:</strong> Especially bei Open-Source-Lösungen</li>
-            </ul>
-            
-            <div class="faq">
-                <h3>❓ Häufig gestellte Fragen</h3>
-                
-                <h4>Kann ich Smart Home komplett ohne Internet nutzen?</h4>
-                <p>Ja, mit Systemen wie Shelly oder Home Assistant kannst du alles lokal steuern. Allerdings brauchst du für Fernzugriff eine Internetverbindung.</p>
-                
-                <h4>Was ist der günstigste Einstieg ohne Abo?</h4>
-                <p>TP-Link Tapo bietet den günstigsten Einstieg ab ca. 20€ pro Gerät. Die App ist komplett kostenlos.</p>
-                
-                <h4>Funktioniert Philips Hue ohne Bridge?</h4>
-                <p>Nein, für volle Funktionalität brauchst du die Bridge. Die Kosten (~45€) amortisieren sich aber schnell durch fehlende Abo-Kosten.</p>
-                
-                <h4>Ist Home Assistant schwer einzurichten?</h4>
-                <p>Es erfordert technisches Interesse. Es gibt aber mittlerweile gute Anleitungen und eine große Community. Für Einsteiger empfehlen wir TP-Link Tapo oder Aqara.</p>
-            </div>
-            
-            <h2>Fazit</h2>
-            <p>Smart Home ohne Abo ist nicht nur möglich, sondern oft die bessere Wahl. Mit Systemen wie TP-Link Tapo, Philips Hue, Shelly oder Home Assistant bekommst du alle Funktionen, ohne jemals monatlich zahlen zu müssen.</p>
-            
-            <p>Die Anfangsinvestition kann zwar höher sein, aber über die Jahre sparst du Hunderte Euro – und bist obendrein unabhängiger und datenschutzfreundlicher unterwegs.</p>
-            
-            <p>Unser Tipp: Beginne mit TP-Link Tapo für den Einstieg und erweitere nach Bedarf. So hast du volle Kontrolle über deine Kosten.</p>
-            
-            <div class="disclaimer">
-                *Dieser Beitrag enthält Affiliate-Links. Als Amazon-Partner verdiene ich an qualifizierten Käufen.
-            </div>
-        </article>
+        </div>
         
+        <div class="content-box pro">
+            <h2>✅ Diese Hersteller sind Abo-frei</h2>
+            <ul>
+                <li><strong>Shelly</strong> - 100% lokal, kein Cloudzwang</li>
+                <li><strong>TP-Link Tapo</strong> - kostenlose App, lokale Steuerung</li>
+                <li><strong>Home Assistant</strong> - komplett lokal, open source</li>
+                <li><strong>Aqara</strong> - lokale Steuerung ohne Abo</li>
+                <li><strong>Homematic IP</strong> - Made in Germany, kein Abo</li>
+            </ul>
+        </div>
+        
+        <div class="content-box">
+            <h2>Die beste Lösung: Home Assistant</h2>
+            <p>Home Assistant ist kostenlos, läuft lokal auf deinem eigenen Server und hat keine monatlichen Kosten.</p>
+            
+            <div class="tip-box">
+                <strong>💡 Tipp:</strong> Home Assistant Green kostet €89 und ist in 5 Minuten eingerichtet. Damit hast du ein Smart Home ohne jegliche laufende Kosten.
+            </div>
+        </div>
+        
+        <div class="content-box">
+            <h2>Fazit</h2>
+            <p>Smart Home ohne Abo ist absolut möglich. Die Regel:</p>
+            <ul>
+                <li>🛒 Kaufe Hersteller mit <strong>lokaler Steuerung</strong></li>
+                <li>🔒 Achte auf <strong>Datenschutz</strong> (Server in DE/EU)</li>
+                <li>💰 Vermeide <strong>Cloud-abhängige</strong> Geräte</li>
+                <li>🖥️ Setze auf <strong>Home Assistant</strong> als Zentrale</li>
+            </ul>
+        </div>
     </main>
     
     <footer>
-        <p>🏠 Smart Home Guide Deutschland</p>
-        <p>Tests & Vergleiche für dein intelligentes Zuhause</p>
-        <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.6;">
-            Amazon and the Amazon logo are trademarks of Amazon.com, Inc or its affiliates.
-        </p>
+        <p>Smart Home Guide Deutschland &copy; 2026</p>
+        <div class="links">
+            <a href="/">Startseite</a>
+            <a href="guide.html">Guide</a>
+            <a href="about.html">Über uns</a>
+        </div>
     </footer>
+    
+    <script>lucide.createIcons();</script>
 </body>
 </html>

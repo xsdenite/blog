@@ -3,91 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Steckdosen - Die besten im Test 2026</title>
-    <meta name="description" content="Smart Steckdosen Test 2026: TP-Link, Amazon, AVM. Die besten WLAN-Steckdosen mit App-Steuerung im Vergleich.">
+    <title>Smart Steckdosen Test 2026 - Die besten WLAN Steckdosen</title>
+    <meta name="description" content="Unsere Tests der besten Smart Steckdosen 2026. TP-Link Tapo, Shelly, Gosund im Vergleich. Mit Kaufempfehlungen.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        :root { --primary: #0f172a; --accent: #3b82f6; --accent-hover: #2563eb; --success: #10b981; --warning: #f59e0b; --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-300: #cbd5e1; --gray-400: #94a3b8; --gray-500: #64748b; --gray-600: #475569; --gray-700: #334155; --shadow: 0 4px 6px -1px rgba(0,0,0,0.1); --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1); --radius: 12px; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; }
-        header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 2rem; text-align: center; }
-        header h1 { font-size: 2rem; }
-        nav { background: #0f3460; padding: 0.8rem; position: sticky; top: 0; }
-        nav a { color: white; text-decoration: none; margin: 0 0.8rem; padding: 0.5rem; border-radius: 4px; }
-        nav a:hover { background: #e94560; }
-        main { max-width: 900px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 12px; }
-        .intro { margin-bottom: 2rem; }
-        .product-card { border: 1px solid #eee; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
-        .product-card h3 { color: #1a1a2e; margin-bottom: 0.5rem; }
-        .product-card .meta { color: #666; font-size: 0.9rem; margin-bottom: 0.5rem; }
-        .product-card .rating { color: #f39c12; }
-        .product-card .price { font-size: 1.5rem; color: #27ae60; font-weight: bold; margin: 0.5rem 0; }
-        .product-card .features { margin: 1rem 0; }
-        .product-card .features li { margin: 0.3rem 0; }
-        .product-card .btn { display: inline-block; background: #e94560; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 4px; }
-        .product-card .btn:hover { background: #d63850; }
-        footer { background: #1a1a2e; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: var(--gray-700); background: var(--gray-50); }
+        
+        nav { background: white; border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; }
+        nav .logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--primary); text-decoration: none; }
+        nav .logo i { color: var(--accent); }
+        nav .nav-links { display: flex; gap: 0.25rem; }
+        nav a { color: var(--gray-600); text-decoration: none; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500; transition: all 0.2s; display: flex; align-items: center; gap: 0.4rem; }
+        nav a:hover { background: var(--gray-100); color: var(--primary); }
+        nav a.active { background: var(--gray-100); color: var(--accent); }
+        
+        header { background: linear-gradient(135deg, var(--primary), #1e293b); color: white; padding: 3rem 1rem; text-align: center; }
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        header p { opacity: 0.9; font-size: 1.1rem; }
+        
+        main { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+        
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gray-600); text-decoration: none; margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .back-link:hover { color: var(--accent); }
+        
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+        
+        .product-card { background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: all 0.3s; border: 1px solid var(--gray-100); }
+        .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        
+        .product-card .image { aspect-ratio: 16/10; overflow: hidden; background: var(--gray-100); }
+        .product-card .image img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .product-card .content { padding: 1.5rem; }
+        .product-card .badge { display: inline-block; background: var(--success); color: white; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .product-card h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem; }
+        .product-card .price { font-size: 1.5rem; font-weight: 700; color: var(--success); margin-bottom: 1rem; }
+        .product-card .price span { font-size: 0.9rem; color: var(--gray-400); font-weight: 400; }
+        .product-card ul { list-style: none; margin-bottom: 1rem; }
+        .product-card li { padding: 0.4rem 0; color: var(--gray-600); font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+        .product-card li i { color: var(--success); width: 16px; }
+        .product-card .rating { color: var(--warning); margin-bottom: 1rem; }
+        .product-card a.btn { display: block; background: var(--accent); color: white; padding: 0.75rem; text-align: center; text-decoration: none; border-radius: 8px; font-weight: 500; transition: all 0.2s; }
+        .product-card a.btn:hover { background: var(--accent-hover); }
+        
+        .info-box { background: white; border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; box-shadow: var(--shadow); border-left: 4px solid var(--accent); }
+        .info-box h3 { margin-bottom: 0.5rem; color: var(--primary); }
+        
+        footer { background: var(--primary); color: white; padding: 2rem 1rem; margin-top: 4rem; text-align: center; }
+        footer p { opacity: 0.7; font-size: 0.9rem; }
+        footer .links { margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        footer .links a { color: white; opacity: 0.7; text-decoration: none; font-size: 0.85rem; }
+        footer .links a:hover { opacity: 1; }
+        
+        @media (max-width: 768px) { header h1 { font-size: 1.75rem; } nav .nav-links { display: none; } }
     </style>
 </head>
 <body>
-    <header>
-        <h1>🔌 Smart Steckdosen Test 2026</h1>
-    </header>
     <nav>
-        <a href="/">Startseite</a>
-        <a href="/guide.html">Guide</a>
-        <a href="/thermostate.html">Thermostate</a>
-        <a href="/kameras.html">Kameras</a>
+        <div class="container">
+            <a href="/" class="logo"><i data-lucide="home"></i> Smart Home Guide</a>
+            <div class="nav-links">
+                <a href="/">Start</a>
+                <a href="guide.html">Guide</a>
+                <a href="smart-plugs.html" class="active">Steckdosen</a>
+                <a href="thermostate.html">Thermostate</a>
+                <a href="kameras.html">Kameras</a>
+                <a href="hub-vergleich.html">Hubs</a>
+                <a href="about.html">Über</a>
+            </div>
+        </div>
     </nav>
     
+    <header>
+        <h1>Smart Steckdosen Test 2026</h1>
+        <p>Die besten WLAN Steckdosen im Vergleich</p>
+    </header>
+    
     <main>
-        <div class="intro">
-            <p>Intelligente Steckdosen sind der einfachste Einstieg ins Smart Home. Mit einer WLAN-Steckdose machst du jedes normale Gerät "smart" – per App steuerbar, mit Zeitplänen und oft sogar Stromverbrauchsmessung.</p>
+        <a href="/" class="back-link"><i data-lucide="arrow-left"></i> Zurück zur Startseite</a>
+        
+        <div class="info-box">
+            <h3><i data-lucide="info"></i> Kurzinfo</h3>
+            <p>Smart Steckdosen sind der günstigste Einstieg ins Smart Home. Schalte Geräte per App oder Sprachbefehl und überwache den Stromverbrauch.</p>
         </div>
         
-        <div class="product-card">
-            <h3>TP-Link Tapo P110</h3>
-            <div class="meta"><span class="rating">⭐ 4.6/5</span> · 28.420 Rezensionen</div>
-            <div class="price">€34,99</div>
-            <ul class="features">
-                <li>✅ Stromverbrauchsmessung</li>
-                <li>✅ App-Steuerung (Tapo)</li>
-                <li>✅ Alexa & Google Assistant</li>
-                <li>✅ Zeitpläne & Timer</li>
-                <li>✅ Kompakte Größe</li>
-            </ul>
-            <a href="#" class="btn">Bei Amazon ansehen →</a>
-        </div>
-        
-        <div class="product-card">
-            <h3>Amazon Smart Plug</h3>
-            <div class="meta"><span class="rating">⭐ 4.4/5</span> · 15.200 Rezensionen</div>
-            <div class="price">€24,99</div>
-            <ul class="features">
-                <li>✅ Nur für Alexa</li>
-                <li>✅ Sehr günstig</li>
-                <li>✅ Einfache Einrichtung</li>
-                <li>❌ Keine Strommessung</li>
-                <li>❌ Nur EU-Stecker</li>
-            </ul>
-            <a href="#" class="btn">Bei Amazon ansehen →</a>
-        </div>
-        
-        <div class="product-card">
-            <h3>AVM FRITZ!DECT 200</h3>
-            <div class="meta"><span class="rating">⭐ 4.3/5</span> · 8.900 Rezensionen</div>
-            <div class="price">€39,99</div>
-            <ul class="features">
-                <li>✅ Stromverbrauchsmessung</li>
-                <li>✅ Für FRITZ!Box-Nutzer</li>
-                <li>✅ DECT-Verbindung</li>
-                <li>✅ Sehr stabil</li>
-                <li>❌ Nur mit FRITZ!Box</li>
-            </ul>
-            <a href="#" class="btn">Bei Amazon ansehen →</a>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="image"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="TP-Link Tapo P110"></div>
+                <div class="content">
+                    <span class="badge">Testsieger</span>
+                    <h3>TP-Link Tapo P110</h3>
+                    <div class="rating">★★★★★</div>
+                    <div class="price">€34,99 <span>bei Amazon</span></div>
+                    <ul>
+                        <li><i data-lucide="check"></i> Energieverbrauch-Messung</li>
+                        <li><i data-lucide="check"></i> Zeitpläne & Timer</li>
+                        <li><i data-lucide="check"></i> Amazon Alexa & Google Home</li>
+                        <li><i data-lucide="check"></i> Kompaktes Design</li>
+                    </ul>
+                    <a href="#" class="btn">Bei Amazon ansehen</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="image"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Shelly Plus Plug S"></div>
+                <div class="content">
+                    <span class="badge" style="background:var(--accent)">Premium</span>
+                    <h3>Shelly Plus Plug S</h3>
+                    <div class="rating">★★★★★</div>
+                    <div class="price">€39,99 <span>bei Amazon</span></div>
+                    <ul>
+                        <li><i data-lucide="check"></i> Echte Leistungsmessung</li>
+                        <li><i data-lucide="check"></i> Local & Cloud Steuerung</li>
+                        <li><i data-lucide="check"></i> Matter support</li>
+                        <li><i data-lucide="check"></i> Kein Cloud zwang</li>
+                    </ul>
+                    <a href="#" class="btn">Bei Amazon ansehen</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="image"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Gosund EP2"></div>
+                <div class="content">
+                    <span class="badge" style="background:var(--warning)">Preis-Leistung</span>
+                    <h3>Gosund EP2</h3>
+                    <div class="rating">★★★★☆</div>
+                    <div class="price">€24,99 <span>bei Amazon</span></div>
+                    <ul>
+                        <li><i data-lucide="check"></i> Günstiger Preis</li>
+                        <li><i data-lucide="check"></i> App & Sprachsteuerung</li>
+                        <li><i data-lucide="check"></i> Timer-Funktion</li>
+                        <li><i data-lucide="check"></i> Einfache Einrichtung</li>
+                    </ul>
+                    <a href="#" class="btn">Bei Amazon ansehen</a>
+                </div>
+            </div>
         </div>
     </main>
     
     <footer>
-        <p>🏠 Smart Home Guide Deutschland © 2026</p>
+        <p>Smart Home Guide Deutschland &copy; 2026</p>
+        <div class="links">
+            <a href="/">Startseite</a>
+            <a href="guide.html">Guide</a>
+            <a href="about.html">Über uns</a>
+            <a href="#">Datenschutz</a>
+        </div>
+        <p style="margin-top:1rem;opacity:0.5;font-size:0.75rem">Als Amazon-Partner verdienen wir an qualifizierten Käufen.</p>
     </footer>
+    
+    <script>lucide.createIcons();</script>
 </body>
 </html>

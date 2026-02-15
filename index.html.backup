@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Guide Deutschland - Tests, Vergleiche & Anleitungen</title>
+    <meta name="description" content="Dein Guide für Smart Home - Produkttests, Vergleiche und Anleitungen für Einsteiger. Finde die besten Smart Home Geräte 2026.">
+    <meta name="robots" content="index, follow">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 3rem 1rem; text-align: center; }
+        header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+        header .subtitle { opacity: 0.9; font-size: 1.2rem; }
+        header .hero-text { max-width: 600px; margin: 1rem auto; opacity: 0.8; }
+        
+        /* Navigation */
+        nav { background: #0f3460; padding: 0.8rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        nav .nav-container { max-width: 900px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem; }
+        nav a { color: white; text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 4px; transition: all 0.3s; }
+        nav a:hover { background: #e94560; }
+        
+        /* Main */
+        main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+        
+        /* Hero Section */
+        .hero { background: white; border-radius: 12px; padding: 2.5rem; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center; }
+        .hero h2 { color: #1a1a2e; margin-bottom: 1rem; font-size: 1.8rem; }
+        .hero p { color: #666; font-size: 1.1rem; }
+        
+        /* Categories Grid */
+        .section-title { text-align: center; margin: 2.5rem 0 1.5rem; }
+        .section-title h2 { color: #1a1a2e; font-size: 2rem; }
+        .section-title p { color: #666; margin-top: 0.5rem; }
+        
+        .categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .category-card { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 15px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+        .category-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+        .category-card h3 { color: #1a1a2e; margin-bottom: 0.5rem; font-size: 1.3rem; }
+        .category-card .icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .category-card p { color: #666; font-size: 0.95rem; margin-bottom: 1rem; }
+        .category-card .count { color: #e94560; font-size: 0.85rem; font-weight: 600; }
+        .category-card a { display: inline-block; color: #0f3460; font-weight: 600; text-decoration: none; }
+        .category-card a:hover { color: #e94560; }
+        
+        /* Articles */
+        .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .article-card { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 15px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .article-card:hover { transform: translateY(-3px); }
+        .article-card h3 { color: #1a1a2e; margin-bottom: 0.8rem; font-size: 1.2rem; }
+        .article-card .meta { color: #888; font-size: 0.85rem; margin-bottom: 0.8rem; }
+        .article-card .rating { color: #f39c12; }
+        .article-card .price { color: #27ae60; font-weight: bold; font-size: 1.1rem; margin-bottom: 1rem; }
+        .article-card a { display: inline-block; background: #e94560; color: white; padding: 0.6rem 1.2rem; text-decoration: none; border-radius: 4px; font-size: 0.9rem; }
+        .article-card a:hover { background: #d63850; }
+        
+        /* CTA Section */
+        .cta { background: linear-gradient(135deg, #0f3460, #16213e); color: white; border-radius: 12px; padding: 3rem; text-align: center; margin: 3rem 0; }
+        .cta h2 { margin-bottom: 1rem; }
+        .cta p { opacity: 0.9; margin-bottom: 1.5rem; }
+        .cta a { display: inline-block; background: #e94560; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 6px; font-weight: 600; }
+        
+        /* Footer */
+        footer { background: #1a1a2e; color: white; padding: 3rem 1rem; margin-top: 4rem; }
+        footer .footer-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        footer h3 { margin-bottom: 1rem; }
+        footer p { opacity: 0.7; }
+        footer .links { margin-top: 1.5rem; }
+        footer .links a { color: white; opacity: 0.7; text-decoration: none; margin: 0 1rem; }
+        footer .links a:hover { opacity: 1; }
+        footer .disclaimer { font-size: 0.8rem; opacity: 0.5; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        @media (max-width: 600px) { 
+            header h1 { font-size: 2rem; }
+            nav .nav-container { flex-direction: column; align-items: center; }
+            nav a { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏠 Smart Home Guide</h1>
+        <p class="subtitle">Tests, Vergleiche & Anleitungen für Einsteiger</p>
+        <p class="hero-text">Finde die besten Smart Home Geräte für dein Zuhause. Unabhängige Tests, ehrliche Vergleiche und praktische Anleitungen.</p>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Startseite</a>
+            <a href="smart-home-fuer-anfaenger.html">Anfänger-Guide</a>
+            <a href="hub-vergleich.html">Hub Vergleich</a>
+            <a href="smart-home-ohne-abo.html">Ohne Abo</a>
+            <a href="heizkosten-sparen.html">Heizkosten</a>
+        </div>
+    </nav>
+    
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <h2>Smart Home für Einsteiger</h2>
+            <p>Willst du dein Zuhause intelligent machen? Wir helfen dir, die richtigen Geräte zu finden – von günstigen Einstiegsprodukten bis zu Premium-Lösungen.</p>
+        </section>
+        
+        <!-- Categories -->
+        <section class="section-title">
+            <h2>Produktkategorien</h2>
+            <p>Entdecke die beste Technik für dein Smart Home</p>
+        </section>
+        
+        <div class="categories">
+            <div class="category-card">
+                <div class="icon">📖</div>
+                <h3>Smart Home für Anfänger</h3>
+                <p>Der komplette Guide 2026 - alles was du wissen musst für deinen Einstieg.</p>
+                <span class="count">Ratgeber</span><br>
+                <a href="smart-home-fuer-anfaenger.html">Zum Guide →</a>
+            </div>
+            
+            <div class="category-card">
+                <div class="icon">🎛️</div>
+                <h3>Hub Vergleich</h3>
+                <p>Welcher Smart Home Hub ist der beste? 6 Modelle im ausführlichen Test.</p>
+                <span class="count">Vergleich</span><br>
+                <a href="hub-vergleich.html">Zum Vergleich →</a>
+            </div>
+            
+            <div class="category-card">
+                <div class="icon">💰</div>
+                <h3>Smart Home ohne Abo</h3>
+                <p>Diese Systeme funktionieren komplett ohne monatliche Kosten.</p>
+                <span class="count">Guide</span><br>
+                <a href="smart-home-ohne-abo.html">Zum Guide →</a>
+            </div>
+            
+            <div class="category-card">
+                <div class="icon">🌡️</div>
+                <h3>Heizkosten sparen</h3>
+                <p>Mit smarten Thermostaten bis zu 30% Heizkosten sparen - so geht's!</p>
+                <span class="count">Ratgeber</span><br>
+                <a href="heizkosten-sparen.html">Zum Ratgeber →</a>
+            </div>
+        </div>
+        
+        <!-- Top Products -->
+        <section class="section-title">
+            <h2>Unsere Top-Empfehlungen</h2>
+            <p>Die beliebtesten Produkte unserer Leser</p>
+        </section>
+        
+        <div class="articles-grid">
+            <div class="article-card">
+                <h3>TP-Link Tapo P110</h3>
+                <div class="meta"><span class="rating">⭐ 4.6/5</span> · 28.420 Rezensionen</div>
+                <div class="price">€34,99</div>
+                <p>Die beste Smart Plug für Einsteiger. Einfache Einrichtung, zuverlässig, mit Stromverbrauchsmessung.</p>
+                <a href="#">Bei Amazon ansehen →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>tado° Smart Thermostat V3+</h3>
+                <div class="meta"><span class="rating">⭐ 4.7/5</span> · 3.500 Rezensionen</div>
+                <div class="price">€199,00</div>
+                <p>Das Premium-Thermostat. Intelligente Steuerung, Fenster-offen-Erkennung, spart bis zu 30% Heizkosten.</p>
+                <a href="#">Bei Amazon ansehen →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>TP-Link Tapo C200</h3>
+                <div class="meta"><span class="rating">⭐ 4.6/5</span> · 1.892 Rezensionen</div>
+                <div class="price">€34,99</div>
+                <p>Die beste Überwachungskamera für Einsteiger. Full HD, Nachtsicht, Bewegungserkennung.</p>
+                <a href="#">Bei Amazon ansehen →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>Bosch Smart Home Controller II</h3>
+                <div class="meta"><span class="rating">⭐ 4.4/5</span> · 3.300 Rezensionen</div>
+                <div class="price">€77,99</div>
+                <p>Der deutsche Qualitäts-Hub. Matter-ready, lokal gespeichert, zuverlässig.</p>
+                <a href="#">Bei Amazon ansehen →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>Nuki Smart Lock 4.0</h3>
+                <div class="meta"><span class="rating">⭐ 4.5/5</span> · 2.100 Rezensionen</div>
+                <div class="price">€229,00</div>
+                <p>Das beste Smart Lock für Europa. Fingerabdruck, Auto-Unlock, einfache Montage.</p>
+                <a href="#">Bei Amazon ansehen →</a>
+            </div>
+            
+            <div class="article-card">
+                <h3>meross Garage Opener</h3>
+                <div class="meta"><span class="rating">⭐ 4.6/5</span> · 9.700 Rezensionen</div>
+                <div class="price">€30,68</div>
+                <p>Der Bestseller für Garagentore. Günstig, zuverlässig, einfach installiert.</p>
+                <a href="#">Bei Amazon ansehen →</a>
+            </div>
+        </div>
+        
+        <!-- CTA -->
+        <section class="cta">
+            <h2>Noch Einsteiger?</h2>
+            <p>Unsser Guide "Smart Home für Anfänger" erklärt dir alles, was du wissen musst.</p>
+            <a href="/guide.html">Zum Guide →</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>🏠 Smart Home Guide Deutschland</h3>
+            <p>Unabhängige Tests und Vergleiche für dein intelligentes Zuhause.</p>
+            <div class="links">
+                <a href="/about.html">Über uns</a>
+                <a href="/guide.html">Guide</a>
+                <a href="/datenschutz.html">Datenschutz</a>
+                <a href="/impressum.html">Impressum</a>
+            </div>
+            <div class="disclaimer">
+                <p>Als Amazon-Partner verdienen wir an qualifizierten Käufen. Alle Marken sind Eigentum ihrer jeweiligen Inhaber.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
